@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎉 Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card-container" onclick="openCard()">
+    <div class="card" id="card">
+      
+      <!-- FRONT OF CARD -->
+      <div class="card-front">
+        <!-- 🌌 Starscape background -->
+        <div class="starscape">
+          <div class="moon"></div>
+          <div class="star twinkle"></div>
+          <div class="star twinkle delay1"></div>
+          <div class="star twinkle delay2"></div>
+          <div class="star twinkle delay3"></div>
+          <div class="star twinkle delay4"></div>
+        </div>
+
+        <!-- Birthday Greeting -->
+        <h1>🎁 Click to Open</h1>
+        <p class="emoji">🎂🎈💻</p>
+        <p class="joke">Happy Birthday!<br>May your code always compile 🎉</p>
+        <p class="hint">P.S. This card passed all test cases 😉</p>
+      </div>
+      
+      <!-- BACK OF CARD -->
+      <div class="card-back">
+        <h1>🎉 Happy Birthday!</h1>
+        <div class="cake" onclick="blowOutCandles(event)">
+          <div class="layer layer-top"></div>
+          <div class="layer layer-middle"></div>
+          <div class="layer layer-bottom"></div>
+          <div class="candles">
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+            <div class="candle"><div class="flame"></div></div>
+          </div>
+        </div>
+
+        <p id="message">Click the cake to blow out the candles 🕯️</p>
+        
+        <div class="personal-note">
+          <p>Dear "Lord" Aryan,</p>
+          <p>
+            Wishing you a day filled with laughter, joy, and all the things you love!<br>
+            I’m so glad we met earlier this year — you’ve quickly become such an important part of my life.
+            You’re a truly an amazing person and I’m so lucky to know you.
+            Here’s to more laughs and memories still to come.
+            Hope this year brings you everything you’ve been hoping for!<br>
+
+            <p>P.S. Now that you can legally drink… don't go crazy gramps 🍻😄</p>
+             <p>Cheers to you 🥂</p>
+          </p>
+          <p>— From Renee</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

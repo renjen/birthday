@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  background: linear-gradient(#f0f4f8, #ffffff);
+  font-family: 'Arial Rounded MT Bold', 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card-container {
+  perspective: 1000px;
+  width: 360px;
+  height: 520px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  cursor: pointer;
+}
+
+.card.opened {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  backface-visibility: hidden;
+  background: #fff;
+  box-shadow: 0 0 30px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 30px;
+}
+
+.card-front {
+  background: linear-gradient(to bottom right, #dce3ea, #ffffff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #1e3a5f;
+}
+
+.card-front h1 {
+  color: #e63946;
+}
+
+.card-front .emoji {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.card-front .joke {
+  font-size: 1.2em;
+  color: #333;
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+.card-front .hint {
+  font-size: 1em;
+  color: #555;
+}
+
+.card-back {
+  background: #ffffff;
+  transform: rotateY(180deg);
+}
+
+/* Cake + Flame */
+.cake {
+  margin: 60px auto 20px auto;
+  position: relative;
+  width: 160px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #8b0000; /* Deep red */
+  border: 2px solid #b5651d;
+  border-radius: 10px;
+}
+
+.layer-top { top: 0; height: 30px; width: 100px; }
+.layer-middle { top: 30px; height: 40px; width: 120px; }
+.layer-bottom { top: 70px; height: 50px; width: 140px; }
+
+.candles {
+  position: absolute;
+  top: -30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.candle {
+  width: 10px;
+  height: 30px;
+  background: #cde0f7;
+  position: relative;
+  border-radius: 2px;
+}
+
+.flame {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: orange;
+  border-radius: 50%;
+  animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: translateX(-50%) scale(1); opacity: 1; }
+  to { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
+}
+
+.personal-note {
+  margin-top: 20px;
+  background: #fdf6e3;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 1.1em;
+  color: #444;
+}
